@@ -2,7 +2,7 @@
 #include<stdio.h>
 
 using namespace std;
-void swap_sort(int a,int b,int c,bool order){
+void swap_sort(int &a,int &b,int &c,bool order){
 	int n[] = {a,b,c};
 	cout << order << endl;
 	for (int j = 0; j < 3; j++)
