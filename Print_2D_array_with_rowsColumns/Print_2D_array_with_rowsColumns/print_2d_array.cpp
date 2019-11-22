@@ -5,7 +5,7 @@ using namespace std;
 
 int array_rows_cols(int arr[100][100],int r, int c) {
 	int sumR=0,sumC = 0,tot_sum=0;
-
+    //writes out the matrix and calculets and writes the sum of the rad  
 	for (int x = 0; x < r; x++)
 	{
 		for (int y = 0; y <= c; y++)
@@ -21,6 +21,7 @@ int array_rows_cols(int arr[100][100],int r, int c) {
 			printf("%i  ", arr[x][y]);
 		}
 	}
+	//calculets andwrites out to the sum of the colums and the total sum.
 	cout << endl;
 	for (int i = 0; i < c; i++)
 	{
@@ -43,6 +44,7 @@ int array_rows_cols(int arr[100][100],int r, int c) {
 
 
 int main() {
+	//v
 	int r, c;
 	printf("Number of rows: ");
 	cin >> r;
@@ -51,18 +53,15 @@ int main() {
 	cin >> c;
 
 	int arr[100][100];
-
+	//randomices the valu for each  in the martix.
 	for (int i = 0; i < r; i++)
 	{
 		for (int j = 0; j < c; j++)
 		{
 			arr[i][j] = rand() % 10;
-			//printf("%i ", arr[i, j]);
 		}
-		//printf("\n");
 	}
-	//printf("----------------------------- \n");
-
+	
 	array_rows_cols(arr,r,c);
 
 	cout << "\n";

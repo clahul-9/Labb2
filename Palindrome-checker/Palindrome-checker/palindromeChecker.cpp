@@ -24,10 +24,11 @@ bool is_palindrome(char n[]) {
 }
 
 int main() {
+	//
 	char a[100];
 	printf("enter a world: ");
 	scanf_s("%99s", a, sizeof(a));
-
+	//prints result
 	if (is_palindrome(a)==0)
 	{
 		printf_s("FALSE \n");

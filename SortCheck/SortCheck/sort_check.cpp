@@ -4,23 +4,21 @@
 
 using namespace std;
 
-bool is_sorted(int n[]) {
-	for (int i = 1;i< (sizeof(n));i++)
+bool is_sorted(int n[],int l) {
+	for (int i = 1;i<l-1;i++)
 	{
-		printf("n %i, n+1 %i, n-1 %i \n", n[i], n[i + 1], n[i - 1]);
-		if (n[i]>n[i+1]||n[i]<n[i-1] && n[i]!='\0')
+		//Cheks if the number befor is bigger or the one after is smaler
+		if ((n[i]>n[i+1]||n[i]<n[i-1])&&n[i+1]!='\0')
 		{
-			
-			cout << "false"<<endl;
 			return false;
 		}
 	}
-	cout<<"true"<<endl;
 	return true;
 }
 
 int main() {
-	//andvänd en array av ints och scanf_s
+	//varibals
+	cout << "numbers to check";
 	int b;
 	cin >> b;
 	int *a = new int[b];
@@ -30,17 +28,14 @@ int main() {
 		scanf_s("%d", &a[i]);
 
 	}
-	//int b;
-	//cin >> b;
-	//char *a = new char[b];
-	//scanf_s("%c", a, b);
-
-	//for (int i = 0; i < sizeof(a); i++)
-	//{
-	//	cout << a[i] << endl;
-	//}
-	is_sorted(a);
-	//cout<<is_sorted(a,l)<<endl;
+	//prints the result
+	if (is_sorted(a,b) == 1) {
+		cout << "True";
+	}
+	else if (is_sorted(a,b)==0)
+	{
+		cout << "False";
+	}
+	delete a;
 	system("pause");
-
 }
