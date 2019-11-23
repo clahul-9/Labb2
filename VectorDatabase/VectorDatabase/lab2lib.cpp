@@ -145,6 +145,7 @@ int task3() {
 	array_rows_cols(arr, r, c);
 
 	cout << "\n";
+	return 0;
 }
 
 
@@ -211,6 +212,7 @@ int task4() {
 			printf("Result: %i%i%i", a, b, c);
 		}
 	} while (a != 0);
+	return 0;
 }
 
 
@@ -253,6 +255,8 @@ void shrink(int arr[], int l) {
 		arr[x] = arrN[x];
 	}
 	//delete arrN;
+	
+
 }
 int task5() {
 	//varibals and inputs
@@ -281,6 +285,8 @@ int task5() {
 	{
 		std::cout << arr[k];
 	}
+	return 0;
+
 }
 
 
@@ -376,4 +382,5 @@ int task6() {
 			break;
 		}
 	}
+	return 0;
 }
